@@ -1,0 +1,36 @@
+{
+    "nombreApp" : "Clienteapp",
+    "rutas" : [
+        {
+            "ruta" : "cuenta",
+            "icon" : "accessibility",
+            "texto": "Mi Cuenta",
+            "subtexto": "Información, dirección, metodos de cobro, etc."
+        },
+        {
+            "ruta" : "pedidos",
+            "icon" : "assignment",
+            "texto": "Mis pedidos",
+            "subtexto": "Historial de pedidos"
+        },
+        {
+            "ruta" : "ofrece",
+            "icon" : "touch_app",
+            "texto": "Que me ofrece Pidalo Yaa!",
+            "subtexto": "Servicios , negocios y más."
+        },
+        {
+            "ruta" : "dudas",
+            "icon" : "textsms",
+            "texto": "Dudas y preguntas",
+            "subtexto": "Preguntas frecuentes e información"
+        },
+        {
+            "ruta" : "reporte",
+            "icon" : "warning",
+            "texto": "Reporta un incidente",
+            "subtexto": "Si algo no está bien , aquí te atendemos"
+        }
+    
+    ]
+}

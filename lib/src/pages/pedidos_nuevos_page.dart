@@ -1,0 +1,94 @@
+//import 'package:audioplayers/audio_cache.dart';
+//import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter/material.dart';
+import 'package:negocioapp/src/blocs/provider.dart';
+import 'package:negocioapp/src/providers/usuario_provider.dart';
+import 'package:negocioapp/src/widgets/lista_pedidos.dart';
+
+class PedidosNuevosPage extends StatefulWidget {
+  static final String routeName = 'pedidos_en_ruta';
+
+  @override
+  _PedidosNuevosPageState createState() => _PedidosNuevosPageState();
+}
+
+class _PedidosNuevosPageState extends State<PedidosNuevosPage> {
+  /* AudioPlayer advancedPlayer;
+
+  @override
+  initState() {
+    super.initState();
+    loadMusic();
+    //dispose();
+  }
+
+  Future loadMusic() async {
+    advancedPlayer = await AudioCache().play("audio/campana.mp3");
+  }
+
+  @override
+  void dispose() {
+    advancedPlayer = null;
+    super.dispose();
+  } */
+
+  @override
+  Widget build(BuildContext context) {
+    final bloc = ProviderBloc.of(context);
+    // final width = ;
+
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          _encabezado(context),
+          SizedBox(height: 5),
+          Expanded(child: _listaPedidos(bloc))
+        ],
+      ),
+    );
+  }
+
+  Widget _listaPedidos(LoginBloc bloc) {
+    final usuarioProvider = new UsuarioProvider();
+
+    //return Container();
+
+    return FutureBuilder(
+      future: usuarioProvider.pedidosNuevos(bloc.email),
+      builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
+        if (snapshot.hasData) {
+          return ListaPedidos(historiales: snapshot.data);
+        } else {
+          return Container(
+              height: 10.0, child: Center(child: CircularProgressIndicator()));
+        }
+      },
+    );
+  }
+
+  Widget _encabezado(BuildContext context) {
+    final _width = MediaQuery.of(context).size.width;
+    return SafeArea(
+      child: Container(
+        width: _width,
+        color: Colors.white,
+        padding: EdgeInsets.all(5.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(height: 10.0),
+            Text(
+              'Estos son tus pedidos nuevos',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 10.0),
+          ],
+        ),
+      ),
+    );
+  }
+}

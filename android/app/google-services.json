@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "232416420500",
+    "firebase_url": "https://pushapp-flutter.firebaseio.com",
+    "project_id": "pushapp-flutter",
+    "storage_bucket": "pushapp-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232416420500:android:a937fe5337ba6eeb088a81",
+        "android_client_info": {
+          "package_name": "com.pideloyaa.negocioapp.negocioapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232416420500-g99vnh4mq4989v6q4d0j4je6qi0lp014.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pideloyaa.negocioapp.negocioapp",
+            "certificate_hash": "1b7251dd101dae2589c8b1ef2c08076086e98f96"
+          }
+        },
+        {
+          "client_id": "232416420500-jlf56r39nr8u8d5bnagrkuj6l2d2guuq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeir6P6gi0XIQpDe3gLyPMxRWPqXwfGy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232416420500-jlf56r39nr8u8d5bnagrkuj6l2d2guuq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
